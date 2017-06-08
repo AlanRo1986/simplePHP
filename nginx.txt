@@ -1,0 +1,13 @@
+
+#http://demo.com/?_escaped_fragment_=/uc_center/
+
+#if ($args ~ _escaped_fragment_) {
+#    rewrite ^/(.*)$ /snapshots/index.php?$1 last;    
+#}
+
+location / {
+	#http://demo.cn/user/10
+    rewrite ^(.*)$ /index.php?$1 last;
+}
+		
+		

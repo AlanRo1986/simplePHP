@@ -1,0 +1,33 @@
+{include file="header.html"}
+
+<p>{$__APP__}</p>
+<p>{$Controller}</p>
+<p>{$Action}</p>
+<p>{$TMPL}</p>
+<p>{function name="getTime"}</p>
+<p>{lang value="getTime"}</p>
+<p>{conf p1="app" p2="appName"}</p>
+<p>{conf p1="app" p2="appName"}</p>
+
+<ul>
+{foreach from="$data" item="item" key="key"}
+    {if $key eq 'Alan'}
+    <li><b>{$key} - {$data}</b></li>
+    {else}
+    <li>{$key} - {$data}</li>
+    {/if}
+{/foreach}
+</ul>
+
+<div>
+    <img src="/verify" onclick="this.src='/verify?'+Math.random()" >
+</div>
+<form action="/verify" method="post">
+    <input type="text" name="verify_code" autocomplete="false">
+    <input type="submit" value="submit">
+</form>
+
+
+
+</body>
+</html>

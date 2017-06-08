@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+#http://www.demo.com/Controller/Action/Id/Version/AppType(admin|web|api)
+#php 5.5以上
+RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
+#RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+
+</IfModule>
